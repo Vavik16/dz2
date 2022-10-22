@@ -15,7 +15,7 @@ int main() {
     l = viewchange(l);
     if(l != "Incorrect input!") {
     res=calc(l);
-    cout << res;
+    cout << res << endl;
     }
-    else cout << l;
+    else cout << "Result: " << l << endl;
 }
