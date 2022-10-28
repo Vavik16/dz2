@@ -60,8 +60,7 @@ std::string viewchange(std::string &expr) {
                 c++;
             else if (buff == "x" &&
                      (expr[i] == '/' || expr[i] == '*' || expr[i] == '+' || expr[i] == '-' || expr[i] == '^' ||
-                      expr[i] == '('))
-                c++;
+                      expr[i] == '(' || expr[i] == ')'));
             else return "Incorrect input!";
         }
         if (expr[i] == '/' || expr[i] == '*' || expr[i] == '+' || expr[i] == '-' ||
@@ -248,10 +247,10 @@ std::string viewchange(std::string &expr) {
             buf += expr[pos + 1];
         }
     }
-    for(int lll = 0; lll<buf.length()-1; lll++){
-        if(buf[lll]=='(') buf.erase(lll,1);
-    }
     if (!buf.empty()) {
+        for(int lll = 0; lll<buf.length()-1; lll++){
+            if(buf[lll]=='(') buf.erase(lll,1);
+        }
         std::reverse(buf.begin(), buf.end());
         for (int lk = 0; lk < buf.size(); lk++) {
             if (buf[lk] == 'n' && buf[lk + 1] == 'i' && buf[lk + 2] == 's') {

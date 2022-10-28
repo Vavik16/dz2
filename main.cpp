@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int main() {
+int main(){
     string l,l1;
     string res;
     cout << "Hello! Enter your equation (Remember, putting brackets leads to correct result. If you don't put brackets, program will do it automatically)" << endl;
